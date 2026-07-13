@@ -2,11 +2,14 @@
   "name": "stockflow-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "repository": {
     "type": "git",
@@ -15,18 +18,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/rescobilloreymund/stockflow-api/issues"
   },
   "homepage": "https://github.com/rescobilloreymund/stockflow-api#readme",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
+    "compression": "^1.8.1",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "helmet": "^8.3.0",
     "morgan": "^1.11.0",
+    "pg": "^8.22.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -35,7 +41,6 @@
     "@types/express": "^5.0.6",
     "@types/morgan": "^1.9.10",
     "@types/node": "^26.1.1",
-    "compression": "^1.8.1",
     "prisma": "^7.8.0",
     "tsx": "^4.23.0",
     "typescript": "^7.0.2"
