@@ -11,7 +11,7 @@ model Category {
   id        Int       @id @default(autoincrement())
   name      String    @unique
   createdAt DateTime  @default(now())
-  updatedAt DateTime
+  updatedAt DateTime  @updatedAt
   Product   Product[]
 }
 
@@ -25,7 +25,7 @@ model Product {
   categoryId Int
   supplierId Int
   createdAt  DateTime      @default(now())
-  updatedAt  DateTime
+  updatedAt  DateTime      @updatedAt
   Category   Category      @relation(fields: [categoryId], references: [id])
   Supplier   Supplier      @relation(fields: [supplierId], references: [id])
 }
@@ -38,7 +38,7 @@ model Supplier {
   email       String?
   address     String
   createdAt   DateTime  @default(now())
-  updatedAt   DateTime
+  updatedAt   DateTime  @updatedAt
   Product     Product[]
 }
 

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { NotFoundError } from "../errors/NotFoundError";
+import { NotFoundError } from "../errors/not-found.error";
 
 import { prisma } from "../lib/prisma";
 const router = Router();
