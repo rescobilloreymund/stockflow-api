@@ -164,4 +164,5 @@ export const productService = {
   create,
   update,
   remove,
+  findOrThrow,
 };

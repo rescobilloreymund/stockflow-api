@@ -9,6 +9,7 @@ import { CategoryDto } from "../category/dto/category.dto";
 import { ConflictError } from "../../errors/conflict.error";
 import { UpdateCategoryBody } from "./schemas/update-category.schema";
 import { NotFoundError } from "../../errors/not-found.error";
+
 function buildWhere(filters: GetCategoriesQuery): Prisma.CategoryWhereInput {
   const where: Prisma.CategoryWhereInput = {};
 
